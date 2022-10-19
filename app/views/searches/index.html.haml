@@ -1,6 +1,8 @@
+= javascript_pack_tag 'application'
 #search{ search_data(@search, @search_vertical) }
   %h2= t 'searches.search_results'
   = render partial: 'alert', locals: { affiliate: @affiliate } if @affiliate.alert && @affiliate.alert.renderable?
+  = react_component("HelloWorld", { greeting: "Hello from react-rails." })
   - if @search.results.blank?
     = render partial: 'no_results', locals: { search: @search }
   = spelling_suggestion(@search, @search_options)
