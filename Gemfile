@@ -187,3 +187,5 @@ group :test do
   gem 'rails-controller-testing', '~> 1.0'
   gem 'webdrivers', '~> 5.0'
 end
+
+gem "jsbundling-rails", "~> 1.0"

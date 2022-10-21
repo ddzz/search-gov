@@ -6,6 +6,7 @@
     %meta{ 'http-equiv' => 'X-UA-Compatible', :content => 'IE=edge' }
     = render_robots_meta_tag
     = attribution
+    = javascript_include_tag "application", defer: true
     != "<!-- aid: #{@search.affiliate.id} handle: #{@search.affiliate.name} -->"
     = favicon_link_tag @search.affiliate.favicon_url.blank? ? '/favicon_affiliate.ico' : @search.affiliate.favicon_url
 
