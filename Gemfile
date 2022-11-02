@@ -188,5 +188,5 @@ group :test do
   gem 'webdrivers', '~> 5.0'
 end
 
-gem 'webpacker'
 gem 'react_on_rails'
+gem 'shakapacker'
