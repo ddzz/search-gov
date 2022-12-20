@@ -12,8 +12,4 @@ module AffiliateHelper
     JS
     javascript_tag(embed_code)
   end
-
-  def favicon_url(url)
-    url.presence || '/favicon_affiliate.ico'
-  end
 end
