@@ -198,6 +198,7 @@ end
 
 group :test do
   gem 'capybara-screenshot'
+  gem 'deprecation_toolkit', '~> 1.5', '>= 1.5.1'
   gem 'simplecov', '~> 0.17.0', require: false
   gem 'cucumber', '~> 7.1', require: false
   gem 'cucumber-rails', '~> 2.4', require: false

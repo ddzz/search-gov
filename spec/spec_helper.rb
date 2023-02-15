@@ -9,6 +9,7 @@ require 'email_spec'
 require 'authlogic/test_case'
 require 'paperclip/matchers'
 require 'webmock/rspec'
+require './spec/deprecation_toolkit_env'
 
 include Authlogic::TestCase
 WebMock.disable_net_connect!(allow_localhost: true)
@@ -51,6 +52,7 @@ RSpec.configure do |config|
   # Setting this allows you to use `--seed` to deterministically reproduce
   # test failures related to randomization by passing the same `--seed` value
   # as the one that triggered the failure.
+  # config.deprecation_stream = File.open('deprecations.txt', 'w')
   Kernel.srand config.seed
 
   config.mock_with :rspec
