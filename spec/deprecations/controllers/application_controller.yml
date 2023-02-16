@@ -1,0 +1,5 @@
+---
+test_example_controller_when_the_format_for_the_request_is_not_a_valid_format_responds_with_a_204:
+- |
+  DEPRECATION WARNING: ActiveSupport::PerThreadRegistry is deprecated and will be removed in Rails 7.1.
+  Use `Module#thread_mattr_accessor` instead.

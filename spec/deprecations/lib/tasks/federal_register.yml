@@ -1,0 +1,6 @@
+---
+test_federal_register_rake_tasks_usasearch:federal_register:import_documents_should_import_federal_register_documents:
+- 'DEPRECATION WARNING: /Users/lorajwoodford/Documents/GitHub/search-gov/lib/tasks/federal_register.rake:11:
+  warning: deprecated Object#=~ is called on FalseClass; it always returns nil
+
+  '

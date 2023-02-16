@@ -1,0 +1,11 @@
+---
+test_i14y_membership_is_expected_to_belong_to_i14y_drawer_required:_false:
+- 'DEPRECATION WARNING: WARNING: ignoring the provided expectation message argument
+  ({:inverse_of=>:i14y_memberships}) since it is not a string or a proc.
+
+  '
+test_i14y_membership_is_expected_to_belong_to_affiliate_required:_false:
+- 'DEPRECATION WARNING: WARNING: ignoring the provided expectation message argument
+  ({:inverse_of=>:i14y_memberships}) since it is not a string or a proc.
+
+  '

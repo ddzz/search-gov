@@ -1,0 +1,12 @@
+---
+test_twitter_client.instance_is_expected_to_be_an_instance_of_twitter/rest/client:
+- 'DEPRECATION WARNING: /Users/lorajwoodford/Documents/GitHub/search-gov/lib/twitter_client.rb:6:in
+  `block (2 levels) in instance'': [DEPRECATION] #oauth_token= is deprecated. Use
+  #access_token= instead.
+
+  '
+- 'DEPRECATION WARNING: /Users/lorajwoodford/Documents/GitHub/search-gov/lib/twitter_client.rb:6:in
+  `block (2 levels) in instance'': [DEPRECATION] #oauth_token_secret= is deprecated.
+  Use #access_token_secret= instead.
+
+  '

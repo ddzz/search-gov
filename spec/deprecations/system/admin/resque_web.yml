@@ -1,0 +1,19 @@
+---
+test_resque_web_when_a_super_admin_is_logged_in_includes_the_resque_scheduler_tabs:
+- 'DEPRECATION WARNING: The client method is deprecated as of redis-rb 4.0.0, please
+  use the new _clientmethod instead. Support for the old method will be removed in
+  redis-namespace 2.0.
+
+  '
+test_resque_web_when_a_super_admin_is_logged_in_when_visiting_the_resque_scheduler_page_displays_the_list_of_scheduled_jobs:
+- 'DEPRECATION WARNING: Passing ''info'' command to redis as is; administrative commands
+  cannot be effectively namespaced and should be called on the redis connection directly;
+  passthrough has been deprecated and will be removed in redis-namespace 2.0 (at /Users/lorajwoodford/.rvm/gems/ruby-3.0.5/gems/resque-1.27.4/lib/resque/data_store.rb:59:in
+  `method_missing'')
+
+  '
+- 'DEPRECATION WARNING: The client method is deprecated as of redis-rb 4.0.0, please
+  use the new _clientmethod instead. Support for the old method will be removed in
+  redis-namespace 2.0.
+
+  '

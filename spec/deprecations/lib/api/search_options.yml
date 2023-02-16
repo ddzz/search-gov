@@ -1,0 +1,9 @@
+---
+test_api/search_options#valid?(:affiliate)_when_the_affiliate_does_not_exist_returns_false:
+- 'DEPRECATION WARNING: WARNING: An expectation of `:find_by_name` was set on `nil`.
+  To allow expectations on `nil` and suppress this message, set `RSpec::Mocks.configuration.allow_message_expectations_on_nil`
+  to `true`. To disallow expectations on `nil`, set `RSpec::Mocks.configuration.allow_message_expectations_on_nil`
+  to `false`. Called from /Users/lorajwoodford/Documents/GitHub/search-gov/spec/lib/api/search_options_spec.rb:96:in
+  `block (4 levels) in <top (required)>''.
+
+  '

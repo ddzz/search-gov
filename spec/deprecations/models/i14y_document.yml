@@ -1,0 +1,13 @@
+---
+test_i14y_document#save_when_the_save_is_unsuccessful_raises_an_error:
+- 'DEPRECATION WARNING: WARNING: Using the `raise_error` matcher without providing
+  a specific error or message risks false positives, since `raise_error` will match
+  when Ruby raises a `NoMethodError`, `NameError` or `ArgumentError`, potentially
+  allowing the expectation to pass without even executing the method you are intending
+  to call. Actual error raised was #<NoMethodError: undefined method `developer_message''
+  for nil:NilClass>. Instead consider providing a specific error class or message.
+  This message can be suppressed by setting: `RSpec::Expectations.configuration.on_potential_false_positives
+  = :nothing`. Called from /Users/lorajwoodford/Documents/GitHub/search-gov/spec/models/i14y_document_spec.rb:78:in
+  `block (4 levels) in <top (required)>''.
+
+  '

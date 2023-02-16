@@ -13,7 +13,7 @@ describe HealthChecksController do
       before { allow(Language).to receive(:first).and_raise(Mysql2::Error.new('trouble')) }
 
       it 'raises an error' do
-        expect { get :new }.to raise_error
+        expect { get :new }.to raise_error(Mysql2::Error)
       end
     end
   end

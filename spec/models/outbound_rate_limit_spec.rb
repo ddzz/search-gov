@@ -24,7 +24,7 @@ describe OutboundRateLimit do
     context 'when the interval is invalid' do
       let(:interval) { 'fortnight' }
 
-      specify { expect { subject }.to raise_error }
+      specify { expect { subject }.to raise_error(RuntimeError) }
     end
   end
 
@@ -46,7 +46,7 @@ describe OutboundRateLimit do
     context 'when the interval is invalid' do
       let(:interval) { 'fortnight' }
 
-      specify { expect { subject }.to raise_error }
+      specify { expect { subject }.to raise_error(RuntimeError) }
     end
   end
 end
