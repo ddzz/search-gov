@@ -3,7 +3,7 @@
 class LandingPageFinder
   include Rails.application.routes.url_helpers
 
-  ACCESS_DENIED_TEXT = <<~MESSAGE
+  ACCESS_DENIED_TEXT = <<~MESSAGE.freeze
     Access Denied: These credentials are not recognized as valid
     for accessing Search.gov. Please reach out to
     #{SUPPORT_EMAIL_ADDRESS} if you believe this is in error.

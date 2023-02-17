@@ -8,11 +8,11 @@ class Api::SearchOptions
                   :limit_range
 
   self.default_limit = 20
-  self.limit_range = (1..50).freeze
+  self.limit_range = (1..50)
 
-  OFFSET_RANGE = (0..1000).freeze
+  OFFSET_RANGE = (0..1000)
   DEFAULT_OFFSET = 0
-  OFFSET_ERROR_MESSAGE = "must be between #{OFFSET_RANGE.first} and #{OFFSET_RANGE.last}"
+  OFFSET_ERROR_MESSAGE = "must be between #{OFFSET_RANGE.first} and #{OFFSET_RANGE.last}".freeze
   QUERY_PARAMS = %i(query query_not query_or query_quote)
 
   attr_accessor :access_key,

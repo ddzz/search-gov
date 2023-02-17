@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   before_action :set_user, except: :create
   before_action :complain_if_non_gov_email, only: [:show, :edit]
 
-  NON_GOV_EMAIL_MESSAGE = <<~MESSAGE
+  NON_GOV_EMAIL_MESSAGE = <<~MESSAGE.freeze
     Because you don't have a .gov or .mil email address, we need additional information.
     If you are a contractor on an active contract, please use your .gov or .mil email
     address on this account, or have your federal POC email #{SUPPORT_EMAIL_ADDRESS}

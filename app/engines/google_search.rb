@@ -6,7 +6,7 @@ class GoogleSearch < SearchEngine
   SEARCH_CX = Rails.application.secrets.google[:search_cx].freeze
   VALID_ADULT_FILTERS = %w{off medium high}
   DEFAULT_START = 1
-  PER_PAGE_RANGE = (1..10).freeze
+  PER_PAGE_RANGE = (1..10)
   NAMESPACE = 'google_api'.freeze
   BING_TO_GOOGLE_LOCALE_MAPPING = {
     he: 'iw',

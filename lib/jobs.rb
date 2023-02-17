@@ -22,7 +22,7 @@ module Jobs
     '|(histor)(y|ies)' \
     "|#{Date.current.year.to_s}" \
     "|#{BLOCKED_PHRASES}" \
-    "|(#{SIMPLE_SINGULARS.join('|')})s?"
+    "|(#{SIMPLE_SINGULARS.join('|')})s?".freeze
   SEARCH_RADIUS = 75
 
   def self.establish_connection!

@@ -11,7 +11,7 @@ class User < ApplicationRecord
     (?:[A-Z0-9-]+\.)+  # subdomains
     (?:[A-Z]{2,25})     # TLD
     \z
-  /ix.freeze
+  /ix
 
   APPROVAL_STATUSES = %w[pending_approval approved not_approved].freeze
 

@@ -1,5 +1,5 @@
 module RssFeedParser
-  VALID_YEAR_RANGE = (1000..9999).freeze
+  VALID_YEAR_RANGE = (1000..9999)
 
   def extract_published_at(item, *pub_date_paths)
     published_at = nil

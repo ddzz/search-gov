@@ -3,7 +3,7 @@ class Api::GssSearchOptions < Api::CommercialSearchOptions
   attr_reader :api_key
 
   self.default_limit = 10
-  self.limit_range = (1..10).freeze
+  self.limit_range = (1..10)
 
   validates_presence_of :cx,
                         message: 'must be present'

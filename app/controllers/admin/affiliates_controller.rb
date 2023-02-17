@@ -90,7 +90,7 @@ class Admin::AffiliatesController < Admin::AdminController
       website
     ]
     config.update.columns = []
-    enable_disable_column_regex = /^(is_|dap_enabled|gets_blended_results|gets_commercial_results_on_blended_search|jobs_enabled|raw_log_access_enabled|gets_i14y_results)/.freeze
+    enable_disable_column_regex = /^(is_|dap_enabled|gets_blended_results|gets_commercial_results_on_blended_search|jobs_enabled|raw_log_access_enabled|gets_i14y_results)/
 
     config.update.columns.add_subgroup 'Settings' do |name_group|
       name_group.add *update_columns.reject { |column| column =~ enable_disable_column_regex }

@@ -3,7 +3,7 @@
 class MedTopic < ApplicationRecord
   MAX_MED_TOPIC_SUMMARY_LENGTH = 200
   MEDLINE_BASE_URL = 'https://medlineplus.gov/'
-  MEDLINE_BASE_VOCAB_URL = "#{MEDLINE_BASE_URL}xml/"
+  MEDLINE_BASE_VOCAB_URL = "#{MEDLINE_BASE_URL}xml/".freeze
 
   validates_presence_of :medline_tid, :medline_title, :locale
   has_many :synonyms,
