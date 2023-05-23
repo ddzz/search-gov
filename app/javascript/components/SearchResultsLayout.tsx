@@ -37,6 +37,7 @@ interface SearchResultsLayoutProps {
   params?: {
     query?: string
   };
+  locale?: {};
 }
 
 // To be updated
@@ -49,7 +50,7 @@ const isBasicHeader = (): boolean => {
   return true;
 };
 
-const SearchResultsLayout = ({ resultsData, additionalResults, vertical, params = {} }: SearchResultsLayoutProps) => {
+const SearchResultsLayout = ({ resultsData, additionalResults, vertical, params = {}, locale }: SearchResultsLayoutProps) => {
   return (
     <>
       <Header 
@@ -71,12 +72,14 @@ const SearchResultsLayout = ({ resultsData, additionalResults, vertical, params 
             query={params.query}
             unboundedResults={resultsData.unboundedResults}
             additionalResults={additionalResults}
+            locale={locale}
           />) : params.query ? (
           <Results 
             vertical={vertical}
             totalPages={null}
             query={params.query}
             unboundedResults={true}
+            locale={locale}
           />) : <></>}
       </div>
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import { GridContainer, Grid } from '@trussworks/react-uswds';
 import parse from 'html-react-parser';
+import { I18n } from "i18n-js";
 
 import { Pagination } from './../Pagination/Pagination';
 
@@ -30,9 +31,11 @@ interface ResultsProps {
   unboundedResults: boolean;
   totalPages: number | null;
   vertical: string;
+  locale?: {};
 }
 
-export const Results = ({ query = '', results = null, additionalResults = null, unboundedResults, totalPages = null, vertical }: ResultsProps) => {
+export const Results = ({ query = '', results = null, additionalResults = null, unboundedResults, totalPages = null, vertical, locale }: ResultsProps) => {
+  const i18n = new I18n(locale);
   return (
     <>
       <div className='search-result-wrapper'>
@@ -130,7 +133,7 @@ export const Results = ({ query = '', results = null, additionalResults = null, 
             <GridContainer className='result search-result-item'>
               <Grid row>
                 <Grid tablet={{ col: true }}>
-                  <h4>Sorry, no results found for &#39;{query}&#39;. Try entering fewer or more general search terms.</h4>
+                  <h4>{i18n.t('no_results_for_and_try', { query: query })}</h4>
                 </Grid>
               </Grid>
             </GridContainer>)}
