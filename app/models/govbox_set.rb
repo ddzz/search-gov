@@ -1,3 +1,5 @@
+require 'ostruct'
+
 class GovboxSet
   DEFAULT_JOB_HIGHLIGHTING_OPTIONS = {
     pre_tags: %w[<strong>],
@@ -226,16 +228,10 @@ class GovboxSet
   end
 
   def init_federal_register_documents
-    if @affiliate.is_federal_register_document_govbox_enabled? &&
-       @affiliate.agency && @affiliate.agency.federal_register_agency.present?
-
-      search_options = build_search_options(
-        federal_register_agency_ids: [@affiliate.agency.federal_register_agency_id],
-        language: 'en'
-      )
-      @federal_register_documents = ElasticFederalRegisterDocument.search_for(search_options)
-      @modules << 'FRDOC' if elastic_results_exist?(@federal_register_documents)
-    end
+    tempData = { results: FederalRegisterDocument.first(3), total: 3 }
+    os = OpenStruct.new tempData
+    @federal_register_documents = os
+    @modules << 'FRDOC' if elastic_results_exist?(@federal_register_documents)
   end
 
   def init_text_best_bets

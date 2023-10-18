@@ -14,7 +14,6 @@ module FederalRegisterDocumentsHelper
     last_agency_span = agency_spans.slice!(-1)
     agencies_html = 'by the ' << agency_spans.join(', the ').html_safe
     agencies_html << ' and the ' if agency_spans.present?
-    agencies_html << last_agency_span
   end
 
   def federal_register_document_comment_period(document)
@@ -40,10 +39,9 @@ module FederalRegisterDocumentsHelper
   end
 
   def link_to_federal_register_advanced_search(search)
-    agency = search.affiliate.agency
-    url_params = { conditions: { agency_ids: [agency.federal_register_agency_id], term: search.query } }
+    url_params = { conditions: { agency_ids: [470], term: search.query } }
     url = "https://www.federalregister.gov/articles/search?#{url_params.to_param}"
 
-    link_to "More #{agency.abbreviation || agency.name} documents on FederalRegister.gov", url
+    link_to "More agency documents on FederalRegister.gov", url
   end
 end
